@@ -8,13 +8,18 @@ import enums.OrderStatus;
 
 public class Order {
 	private Date moment;
-	private OrderStatus status;
+//	private OrderStatus status;
 	
 	List<OrderItem> items = new ArrayList<>();
-	Client client = new Client();
-	
-	public Order() {
+	public static Client client = new Client();
+	OrderStatus status;
 		
+//	public Order() {
+		
+//	}
+	
+	public void addItem(OrderItem item) {
+		items.add(item);
 	}
 	
 	public Date getMoment() {
